@@ -1,5 +1,11 @@
 #include <iostream>
+
+#if defined(_WIN32) || defined(_WIN64)
 #include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
 using namespace std;
 
 void run_001() {
@@ -20,7 +26,13 @@ void run_001() {
     int process = 0;
     while(process != 100) {
         cout << "[" << process << "%]" << " Выполняю расчет" << endl;
+
+        #if defined(_WIN32) || defined(_WIN64)
         Sleep(100);
+        #else
+        sleep(100);
+        #endif
+
         process++;
     }
 
