@@ -3,4 +3,4 @@ project(tutorial)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tutorial main.cpp src/001.cpp src/001.h src/002.cpp src/002.h src/Collection.cpp src/Collection.h)
+add_executable(tutorial main.cpp src/001.cpp src/001.h src/002.cpp src/002.h)
